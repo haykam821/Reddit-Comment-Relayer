@@ -86,3 +86,7 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# Configs
+.reddit-comment-relayerrc*
+reddit-comment-relayer.config.js

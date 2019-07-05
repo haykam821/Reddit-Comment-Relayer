@@ -34,7 +34,9 @@
 		"eslint-plugin-unicorn": "^9.1.1"
 	},
 	"dependencies": {
+		"cosmiconfig": "^5.2.1",
 		"debug": "^4.1.1",
+		"merge-deep": "^3.0.2",
 		"snoostorm": "^1.0.2",
 		"snoowrap": "^1.17.0"
 	}
