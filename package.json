@@ -36,8 +36,10 @@
 	"dependencies": {
 		"cosmiconfig": "^5.2.1",
 		"debug": "^4.1.1",
+		"markdown-escape": "^1.0.2",
 		"merge-deep": "^3.0.2",
 		"snoostorm": "^1.0.2",
-		"snoowrap": "^1.17.0"
+		"snoowrap": "^1.17.0",
+		"string-format": "^2.0.0"
 	}
 }

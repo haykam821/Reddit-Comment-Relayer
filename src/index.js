@@ -13,6 +13,11 @@ const explorer = cosmiconfig("reddit-comment-relayer");
 
 const merge = require("merge-deep");
 
+const stringFormat = require("string-format");
+const format = stringFormat.create({
+	md: require("markdown-escape"),
+});
+
 /**
  * Starts the bot.
  * @param {Object} config The configuration for the bot.
@@ -42,9 +47,13 @@ function start(config) {
 		if (!config.includeCommentAuthors.includes(comment.author.name)) return;
 		if (!config.includeSubreddits.includes(comment.subreddit.display_name)) return;
 
+		const formatObject = {
+			comment,
+		};
+
 		outputSub.submitSelfPost({
-			text: config.outputPostTemplate || comment.body,
-			title: config.outputPostTitle,
+			text: config.outputPostTemplate ? format(config.outputPostTemplate, formatObject) : comment.body,
+			title: format(config.outputPostTitle, formatObject),
 		});
 	});
 }
