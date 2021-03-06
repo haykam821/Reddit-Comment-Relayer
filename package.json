@@ -43,5 +43,8 @@
 		"snoostorm": "^1.0.2",
 		"snoowrap": "^1.17.0",
 		"string-format": "^2.0.0"
+	},
+	"eslintConfig": {
+		"extends": "eslint-config-haykam"
 	}
 }
